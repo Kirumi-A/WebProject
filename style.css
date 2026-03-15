@@ -1,0 +1,228 @@
+/* Generales */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/* Secciones */
+.barra {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 100%;
+    padding: 0px 8px 0px 8px;
+}
+
+.elementos-dentro {
+    display: grid;
+    grid-template-columns: 1fr 240px;
+    height: 99%;
+}
+
+.imagen-texto {
+  display: grid;
+  row-gap: 100px;
+  grid-template-rows: auto 1fr;
+  justify-items: center;
+  align-items: center;
+  padding-top: 8px;
+  text-align: center;
+  place-items: center;
+}
+
+
+/* Elementos */
+html {
+    font-family: "Aldrich", sans-serif;
+    background: 
+        url("./patitas.png") center/cover no-repeat,
+        linear-gradient(180deg, #D6E1F9,#BFB7F9,#7789F3, #5674F0, #033691);
+    background-blend-mode: soft-light, normal, normal;
+}
+
+body{
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+header {
+    position: relative;
+    background-color: #B8D3F2;
+    height: 50px;
+    margin: 6px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 0px 0px #484D7C;
+}
+
+h1 {
+    color: #484D7C;
+    margin: 0;
+    margin-right: auto;
+}
+
+p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: white;
+    margin-top: 120px;
+    padding: 25px;
+    font-family: "Bitcount Single", system-ui;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-align: center;
+    font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 7;
+}
+
+
+/* Fondos */
+.fondo-ventana {
+    background-color: #7C88F6;
+    width: 900px;
+    height: 600px;
+    box-shadow: 0px 0px 8px 1px #5861B2;
+    border-radius: 16px;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+}
+
+
+.fondo-claro {
+    background-color: #B8D3F2;
+    max-height: 520px;
+    border-radius: 15px;
+    margin: 22px 6px 6px 6px;
+    display: grid;
+}
+
+.fondo-texto {
+    margin: 70px 20px 20px 20px;
+    background-color: #6E8AD9;
+    width: 100%;
+    max-width: 600px;
+    min-height: 300px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    padding: 28px;
+    z-index: 1;
+    position: relative;
+}
+
+.navegador {
+    background-color: rgba(88, 97, 178, 1);
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 98%;
+    width: 100%;
+}
+
+
+
+/* Botones */
+.boton-ventana{
+    font-size: 1.15rem;
+    background-color: #7C88F6;
+    color: #103576;
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin: 0px 5px 0px 5px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 2px 2px 5px 0.5px #5861B2 ;
+    cursor: pointer;
+}
+
+.boton-ventana:hover {
+  background-color: #BFB7F9; /* Green */
+  color: white;
+}
+
+.boton-angel {
+    background: url(./CatAngel.jpg) center/cover no-repeat;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow .45s ease, transform .15s ease;
+    position: absolute;
+    margin-top: 20px;
+    z-index: 2;
+    left: 35%;
+}
+
+.boton-angel:hover {
+    background-image: url(./CatFace.jpg);
+    box-shadow: 0 5px 5px 5px #5861B2;
+    transform: translateY(-1px);
+}
+
+.boton-nav {
+    font-size: 1.1rem;
+    border: 0;
+    border-radius: 8px;
+    text-align: left;
+    padding-left: 25px;
+    height: 35px;
+    width: 100%;
+    background: linear-gradient(90deg, #5077EB, #A9BAF0);
+    color: #fff;
+    cursor: pointer;
+
+}
+
+.boton-nav:hover {
+    background: #B8D3F2;
+    color: #ffffff; 
+}
+
+.sub-menu {
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  gap: 6px;
+  margin-left: 10px;
+  padding-left: 8px;
+  border-left: 2px solid rgba(255, 255, 255, 0.25);
+  transition: grid-template-rows .28s ease, opacity .2s ease;
+
+}
+
+.sub-menu > * {
+  min-height: 0;
+}
+
+.sub-menu.abierto {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  margin-left: 30px;
+}
+
+.sub-boton {
+  height: 25px;
+  width: 150px;
+  font-size: .95rem;
+  background: linear-gradient(90deg, #5B85F0, #B0C2F5);
+}
+
+/* Imagenes */
+.CatMusic {
+  opacity: 0.40;
+  margin-top: auto;
+  align-self: center;
+  display: block;
+}

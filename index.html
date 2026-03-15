@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+  <html lang="es">
+    <head>
+      <meta charset="utf-8" />
+      <title>My Website</title>
+      <!-- Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet" />
+      <!-- css -->
+      <link href="./style.css" rel="stylesheet" />
+    </head>
+    <body>
+      <div class="fondo-ventana">
+        <header>
+          <div class="barra">
+            <h1>My Website!</h1>
+            <button class="boton-ventana"> — </button>
+            <button class="boton-ventana"> O </button>
+            <button class="boton-ventana"> ✕ </button>
+          </div>
+        </header>
+
+        <div class="fondo-claro">
+          <div class="elementos-dentro">
+            <button class="boton-angel"></button>
+            <div class="fondo-texto">
+              <p>
+              Buenas este sitio web personal esta dedicado a poner en practica conceptos de mi aprendizaje en Html , CSS y JavaScript. <br><br>
+              Con ello quiero mejorar los conceptos mejor y agregar notas de
+              esto mismo para mi uso personal.
+              </p>
+            </div>
+
+            <!-- Columna derecha: navegador -->
+            <aside class="navegador">
+              <button class="boton-nav">Gatos</button>
+
+              <!-- Botón que despliega -->
+              <button
+                class="boton-nav btn-padre"
+                id="btn-programacion"
+                aria-controls="sub-programacion"
+                aria-expanded="false"
+              >
+                Programacion
+              </button>
+
+              <!-- Submenú colapsable -->
+              <div id="sub-programacion" class="sub-menu" hidden>
+                <button class="boton-nav sub-boton">Java</button>
+                <button class="boton-nav sub-boton">Html</button>
+                <button class="boton-nav sub-boton">CSS</button>
+                <button class="boton-nav sub-boton">JavaScript</button>
+                <button class="boton-nav sub-boton">...</button>
+              </div>
+
+              <button class="boton-nav">Canciones</button>
+
+              <img
+                class="CatMusic"
+                src="./CatMusic.png"
+                alt="Gatito Música"
+                width="150"
+                height="150"
+              />
+            </aside>
+          </div>
+        </div>
+      </div>
+      
+    </body>
+    
+<script>
+  // Toggle para el submenú "Programacion"
+  const btn = document.getElementById('btn-programacion');
+  const panel = document.getElementById(btn.getAttribute('aria-controls'));
+
+  btn.addEventListener('click', () => {
+    const abierto = btn.getAttribute('aria-expanded') === 'true';
+
+    // alternar estado accesible
+    btn.setAttribute('aria-expanded', String(!abierto));
+
+    if (abierto) {
+      // cerrar
+      panel.classList.remove('abierto');
+      // esperar fin de transición antes de ocultar con "hidden"
+      setTimeout(() => (panel.hidden = true), 280);
+    } else {
+      // abrir
+      panel.hidden = false; // quitar hidden para que se vea
+      // en el siguiente frame agrega la clase para transicionar
+      requestAnimationFrame(() => panel.classList.add('abierto'));
+    }
+  });
+</script>
+
+  </html>
+ 
