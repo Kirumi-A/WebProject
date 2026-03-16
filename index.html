@@ -9,7 +9,7 @@
       <link href="https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&display=swap" rel="stylesheet" />
       <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet" />
       <!-- css -->
-      <link href="./style.css" rel="stylesheet" />
+      <link href="./styles.css" rel="stylesheet" />
     </head>
     <body>
       <div class="fondo-ventana">
@@ -35,17 +35,8 @@
 
             <!-- Columna derecha: navegador -->
             <aside class="navegador">
-              <button class="boton-nav">Gatos</button>
-
-              <!-- Botón que despliega -->
-              <button
-                class="boton-nav btn-padre"
-                id="btn-programacion"
-                aria-controls="sub-programacion"
-                aria-expanded="false"
-              >
-                Programacion
-              </button>
+              <button class="boton-nav"> ☘︎ Gatos</button>
+              <button class="boton-nav"> ☘︎ Programacion </button>
 
               <!-- Submenú colapsable -->
               <div id="sub-programacion" class="sub-menu" hidden>
@@ -56,46 +47,28 @@
                 <button class="boton-nav sub-boton">...</button>
               </div>
 
-              <button class="boton-nav">Canciones</button>
-
-              <img
-                class="CatMusic"
-                src="./CatMusic.png"
-                alt="Gatito Música"
-                width="150"
-                height="150"
-              />
+              <button class="boton-nav"> ☘︎ Canciones</button>
+              <img class="CatMusic" src="./CatMusic.png" alt="Gatito Música" width="150" height="150"/>
             </aside>
           </div>
         </div>
       </div>
       
+<!-- Prueba ventanas -->
+  <div id="myWindow" class="window">
+    <div class="window-top">
+      <button class="round one"> — </button>
+      <button class="round two"> O </button>
+      <button class="round three"> ✕ </button>
+    </div>
+    <div class="window-content">
+      <img class="frieren" src="./Frieren.gif" width="270" height="150" alt="Gatito Música" autoplay />
+    </div>
+  </div>
+
     </body>
-    
-<script>
-  // Toggle para el submenú "Programacion"
-  const btn = document.getElementById('btn-programacion');
-  const panel = document.getElementById(btn.getAttribute('aria-controls'));
-
-  btn.addEventListener('click', () => {
-    const abierto = btn.getAttribute('aria-expanded') === 'true';
-
-    // alternar estado accesible
-    btn.setAttribute('aria-expanded', String(!abierto));
-
-    if (abierto) {
-      // cerrar
-      panel.classList.remove('abierto');
-      // esperar fin de transición antes de ocultar con "hidden"
-      setTimeout(() => (panel.hidden = true), 280);
-    } else {
-      // abrir
-      panel.hidden = false; // quitar hidden para que se vea
-      // en el siguiente frame agrega la clase para transicionar
-      requestAnimationFrame(() => panel.classList.add('abierto'));
-    }
-  });
-</script>
+ 
+<script src="./script.js"></script>
 
   </html>
  
