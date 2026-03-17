@@ -1,74 +1,83 @@
 <!DOCTYPE html>
-  <html lang="es">
+<html lang="es">
     <head>
-      <meta charset="utf-8" />
-      <title>My Website</title>
-      <!-- Fonts -->
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link href="https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&display=swap" rel="stylesheet" />
-      <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet" />
-      <!-- css -->
-      <link href="./styles.css" rel="stylesheet" />
-    </head>
-    <body>
-      <div class="fondo-ventana">
-        <header>
-          <div class="barra">
-            <h1>My Website!</h1>
-            <button class="boton-ventana"> — </button>
-            <button class="boton-ventana"> O </button>
-            <button class="boton-ventana"> ✕ </button>
-          </div>
-        </header>
+        <meta charset="UTF-8">
+        <title>My Website</title>
 
-        <div class="fondo-claro">
-          <div class="elementos-dentro">
-            <button class="boton-angel"></button>
-            <div class="fondo-texto">
-              <p>
-              Buenas este sitio web personal esta dedicado a poner en practica conceptos de mi aprendizaje en Html , CSS y JavaScript. <br><br>
-              Con ello quiero mejorar los conceptos mejor y agregar notas de
-              esto mismo para mi uso personal.
-              </p>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet" />
+    <!-- css -->
+    <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+      <audio id="musica" autoplay loop>
+        <source src="./Campus Fashion - Tipling Rock.mp3" type="audio/mp3">
+      </audio>
+
+        <div class="fondo-vent">
+        </div>
+
+        <div class="elementos-vent">
+            <div class="fondo-arriba-claro" style="grid-area: fondo-arriba-claro;">
+                <h1>My Website!</h1>
+                <button class="boton-ventana"> — </button>
+                <button class="boton-ventana"> O </button>
+                <button class="boton-ventana"> ✕ </button>
             </div>
 
-            <!-- Columna derecha: navegador -->
-            <aside class="navegador">
-              <button class="boton-nav"> ☘︎ Gatos</button>
-              <button class="boton-nav"> ☘︎ Programacion </button>
+            <div class="union" style="grid-area: union;">
+                <div class="fondo-izq-claro">      
+                </div>
 
-              <!-- Submenú colapsable -->
-              <div id="sub-programacion" class="sub-menu" hidden>
-                <button class="boton-nav sub-boton">Java</button>
-                <button class="boton-nav sub-boton">Html</button>
-                <button class="boton-nav sub-boton">CSS</button>
-                <button class="boton-nav sub-boton">JavaScript</button>
-                <button class="boton-nav sub-boton">...</button>
-              </div>
+                <div class="fondo-nav"">
+                    <div class="nav-bot">
+                        <button class="boton-nav"> ☘︎ Gatos</button>
+                        <button class="boton-nav"> ☘︎ Programacion </button>
+                        <div class="sub-menu">
+                            <button class="boton-nav sub-boton">Java</button>
+                            <button class="boton-nav sub-boton">Html</button>
+                            <button class="boton-nav sub-boton">CSS</button>
+                            <button class="boton-nav sub-boton">JavaScript</button>
+                            <button class="boton-nav sub-boton">...</button>
+                        </div>
+                        <button class="boton-nav"> ☘︎ Canciones</button>
+                    </div>
+                    <img class="CatMusic" src="./CatMusic.png" alt="Gatito Música" width="150" height="150"/>
+                </div>
 
-              <button class="boton-nav"> ☘︎ Canciones</button>
-              <img class="CatMusic" src="./CatMusic.png" alt="Gatito Música" width="150" height="150"/>
-            </aside>
-          </div>
+                <div class="contenido">
+                    <button id="posicion" class="boton-angel"></button>
+                    <div class="fondo-texto">
+                    <p>
+                        Buenas este sitio web personal esta dedicado a poner en practica conceptos de mi aprendizaje en Html , CSS y JavaScript. <br><br>
+                        Con ello quiero mejorar los conceptos mejor y agregar notas de esto mismo para mi uso personal.
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
-      
-<!-- Prueba ventanas -->
-  <div id="myWindow" class="window">
-    <div class="window-top">
-      <button class="round one"> — </button>
-      <button class="round two"> O </button>
-      <button class="round three"> ✕ </button>
-    </div>
-    <div class="window-content">
-      <img class="frieren" src="./Frieren.gif" width="270" height="150" alt="Gatito Música" autoplay />
-    </div>
-  </div>
+
+        <!-- Prueba ventanas -->
+        <div id="myWindow" class="window">
+            <div class="window-top">
+              <div> </div>
+              <button class="round one"> — </button>
+              <button class="round two"> O </button>
+              <button class="round three"> ✕ </button>
+            </div>
+            
+            <div class="window-content">
+                <img class="frieren" 
+                src="./Frieren.gif" width="270" 
+                height="150" alt="Gatito Música" autoplay />
+            </div>
+        </div>
 
     </body>
- 
+
 <script src="./script.js"></script>
 
-  </html>
- 
+</html>

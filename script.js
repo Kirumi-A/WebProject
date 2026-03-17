@@ -1,4 +1,9 @@
 
+
+    const audio = document.getElementById("musica");
+    audio.volume = 0.3; // valores de 0.0 a 1.0
+
+
 //Make myWindow and myWindow2 draggable in different ways...
 
 //myWindow will only be able to be moved via the top bar (.window-top element). The main element does nothing on mouse down.
